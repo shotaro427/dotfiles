@@ -1,0 +1,39 @@
+## cd
+### common
+export PROJECT_HOME='${HOME}/programming/flutter'
+alias cdfl="cd ${PROJECT_HOME}"
+## git
+alias ga='git add . --all'
+alias gac='git ac'
+alias gb='git branch'
+alias gbd='git branch -d'
+alias gche='git checkout'
+alias gchemas='git checkout master'
+alias gcheb='git checkout -b'
+alias gcom='git commit'
+alias gd='git diff'
+alias gdh='git diff HEAD'
+alias gdhns='git diff HEAD --name-status'
+alias gs='git status'
+alias gp='git push -u'
+alias gpull='git pull'
+alias gpullmas='git pull origin master'
+## openvpn
+alias openvpn="/Applications/OpenVPN\ Connect/OpenVPN\ Connect.app/Contents/MacOS/OpenVPN\ Connect"
+
+# python
+alias python="python3"
+alias pip="python3 -m pip"
+alias gcloud="~/google-cloud-sdk/bin/gcloud"
+
+# Coder
+alias cssh="coder port-forward shotarotauchi --tcp"
+
+# Docker
+alias dc='docker compose'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
+alias dce='docker compose exec'
+alias dcr='docker compose run'
+alias dp='docker ps'
+alias drm='docker rm -f $(docker ps -q -a)'
