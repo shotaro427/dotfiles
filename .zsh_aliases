@@ -37,3 +37,17 @@ alias dce='docker compose exec'
 alias dcr='docker compose run'
 alias dp='docker ps'
 alias drm='docker rm -f $(docker ps -q -a)'
+
+# ls → exa
+alias ls='exa'
+alias ll='exa -l'
+alias la='exa -la'
+alias l='exa -l'
+alias ll='exa -l'
+alias la='exa -la'
+
+# cat → bat
+alias cat='bat'
+
+# df → duf
+alias df='duf'
