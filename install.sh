@@ -11,7 +11,7 @@ check_and_install() {
     fi
 }
 
-sleep 60
+sleep 30
 # システムのアップデート
 echo "✨️✨️✨️✨️ システムをアップデートします..."
 sudo apt update
