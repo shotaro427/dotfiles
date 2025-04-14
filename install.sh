@@ -11,21 +11,10 @@ check_and_install() {
     fi
 }
 
-# リトライ付き apt update
-# 最大6 * 10秒 = 60秒待つ
-echo "✨️✨️✨️✨️ システムをアップデートします..."
-for i in {1..6}; do
-  echo "✨️✨️✨️✨️ aptの更新を試みています... $(($i))回目"
-  if sudo apt update; then
-    echo "✨️✨️✨️✨️ aptの更新が完了しました"
-    break
-  else
-    echo "✨️✨️✨️✨️ aptの更新に失敗しました。10秒後に再試行します..."
-    sleep 10
-  fi
-done
-
+sleep 60
 # システムのアップデート
+echo "✨️✨️✨️✨️ システムをアップデートします..."
+sudo apt update
 echo "✨️✨️✨️✨️ システムをアップグレードします..."
 sudo apt-get upgrade -y
 
