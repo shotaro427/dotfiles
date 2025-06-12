@@ -68,6 +68,30 @@ fi
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # 
+# miseのインストールとセットアップ
+#
+if ! command -v mise &> /dev/null; then
+  echo "miseをインストールします..."
+  curl https://mise.run | sh
+fi
+
+# mise初期化
+if command -v mise &> /dev/null; then
+  eval "$(mise activate zsh)"
+fi
+
+# Node.jsをmise経由でインストール
+if command -v mise &> /dev/null && ! mise list node &> /dev/null; then
+  echo "Node.jsをインストールします..."
+  mise install node@lts
+  mise use --global node@lts
+  
+  # Claude Codeをグローバルインストール
+  echo "Claude Codeをインストールします..."
+  npm install -g @anthropic/claude-code
+fi
+
+# 
 # パスの設定
 
 export PATH="$HOME/.local/bin:$PATH"
